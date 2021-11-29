@@ -1,0 +1,29 @@
+global:
+  security:
+    allowInsecureImages: true
+    
+grafana:
+  global:
+    imagePullSecrets: []
+  config:
+    useGrafanaIniFile: true
+    grafanaIniSecret: 'grafana-config'
+  dashboardsProvider:
+    enabled: true
+  dashboardsConfigMaps:
+    - configMapName: 'cm-grafana-dashboards'
+      fileName: 'dashboard.json'
+  datasources:
+    secretName: 'grafana-config'
+  image:
+    registry: combikubepublic.azurecr.io
+
+influxdb:
+  global:
+    imagePullSecrets: []
+    imageRegistry: combikubepublic.azurecr.io
+  auth:
+    admin:
+      username: 'influx'
+      password: 'influxdbpassword'
+      token: 'tokenStringForInfluxDB'

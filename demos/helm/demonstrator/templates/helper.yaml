@@ -1,0 +1,7 @@
+1: {{ .Release.Name }}
+
+2: {{ .Release.Namespace }}
+
+3: {{ .Files.Get "hello.txt" }}
+
+4: {{ include "demonstrator.name" . }} 

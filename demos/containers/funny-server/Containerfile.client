@@ -1,0 +1,4 @@
+FROM docker.io/alpine:3.17
+RUN apk add w3m
+ENTRYPOINT ["w3m"]
+CMD ["--help"]

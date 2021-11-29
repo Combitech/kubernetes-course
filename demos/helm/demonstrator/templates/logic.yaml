@@ -1,0 +1,16 @@
+1:
+  the_list:
+    {{- range .Values.list }}
+    - {{ . }} is a thing
+    {{- end }}
+
+2: {{ if .Values.exists.enabled -}}
+"This does not exist unless .Values.four.enabled is true!"
+  {{- else -}}
+"The value .Values.four.enabled was false!"
+  {{- end }}
+
+3:
+  {{- with .Values.list }}
+  {{ . }}
+  {{- end }}

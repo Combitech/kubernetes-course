@@ -1,0 +1,13 @@
+1: Hello world!
+
+2: Hi {{ .Values.world }}!
+
+3: Hi {{ .Values.world | upper }}!
+
+4: Hello, {{ "World!" }}
+
+5: Hello, {{ printf "%s and %s" .Values.world "World!" }}
+
+6:
+  drink: {{ .Values.favorite.drink | repeat 5 | quote }}
+  food: {{ .Values.favorite.food | upper | quote }}

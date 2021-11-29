@@ -1,0 +1,20 @@
+world: universe
+
+object:
+  a: "a string"
+  b: "another string"
+  c: "This too is a string"
+
+list:
+  - "item 1"
+  - "item 2"
+  - "item 3"
+  - "item 4"
+  - "item 5"
+
+exists:
+  enabled: true
+
+favorite:
+  food: pizza
+  drink: coffee

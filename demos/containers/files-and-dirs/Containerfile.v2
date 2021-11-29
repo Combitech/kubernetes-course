@@ -1,0 +1,8 @@
+FROM docker.io/ubuntu:22.04
+COPY ./src/dir_a /content/dir_a
+COPY ./src/demo-app.sh /demo-app.sh
+RUN adduser --group --uid 1000 --disabled-password --system container-user
+RUN echo "Image built at: $(date)" > /content/buildlog.txt
+RUN rm /content/dir_a/file_a1.txt
+USER container-user
+ENTRYPOINT ["./demo-app.sh"]

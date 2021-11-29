@@ -1,0 +1,4 @@
+FROM docker.io/ubuntu:22.04
+COPY ./src/dir_a /content/dir_a
+COPY ./src/demo-app.sh /demo-app.sh
+ENTRYPOINT ["./demo-app.sh"]

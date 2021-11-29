@@ -1,0 +1,13 @@
+{
+  "editor.minimap.enabled": false,
+  "workbench.startupEditor": "none",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+      "files.trimTrailingWhitespace": false
+  },
+  "telemetry.telemetryLevel": "off",
+  "git.openRepositoryInParentFolders": "always",
+  "security.workspace.trust.enabled": false
+}
