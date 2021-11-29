@@ -1,0 +1,5 @@
+1: {{ "hello" }}
+
+2: {{ 3 | toString | quote }}
+
+3: {{ default "Does not exist." .Values.nothing }}

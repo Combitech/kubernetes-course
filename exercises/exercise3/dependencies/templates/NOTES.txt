@@ -1,0 +1,6 @@
+1. Get the application URL by running these commands:
+    kubectl port-forward --namespace {{ .Release.Namespace }} svc/{{ .Release.Name }}-grafana 3000:{{ .Values.grafana.service.ports.grafana }} &
+    echo "Browse to http://localhost:3000"
+2: Get login credentials
+    echo "User: {{ .Values.grafana.admin.user }}"
+    echo "Password: $(kubectl get secret {{ .Release.Name }}-grafana-admin --namespace {{ .Release.Namespace }} -o jsonpath="{.data.GF_SECURITY_ADMIN_PASSWORD}" | base64 --decode)"

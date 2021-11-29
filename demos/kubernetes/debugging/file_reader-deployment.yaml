@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: file-reader
+  name: file-reader
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: file-reader
+  template:
+    metadata:
+      labels:
+        app: file-reader
+    spec:
+      containers:
+      - image: primer:1234/file_reader:1
+        name: file-reader
+        resources:
+          requests:
+            cpu: 1

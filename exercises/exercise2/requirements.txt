@@ -1,0 +1,2 @@
+influxdb_client==1.23.0
+pika==1.1.0

@@ -1,0 +1,13 @@
+1:
+  {{ .Values.object }}
+
+2:
+  {{ .Values.object | toYaml }}
+
+3:
+  {{ .Values.object | toYaml | nindent 2 }}
+
+4:
+  {{- .Values.object | toYaml | nindent 1 }}
+
+5: {{ .Values.list }}

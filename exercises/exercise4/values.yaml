@@ -1,0 +1,66 @@
+# vim: set foldmethod=marker:
+# Default values for exercise4.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+##############################     <Consumer>     ##############################{{{
+consumer:
+  config:
+    configMapName: config
+    configMountPath: "/config"
+    readOnly: true
+  env:
+    - name: RABBITMQ_USERNAME
+      value: "guest"
+    - name: RABBITMQ_PASSWORD
+      value: "guest"
+    - name: CONFIG_PATH
+      value: "/config"
+    - name: PYTHONUNBUFFERED
+      value: "1"
+  fullnameOverride: ""
+  image:
+    repository: # TODO
+    pullPolicy: IfNotPresent
+    tag: ""
+  imagePullPolicy: IfNotPresent
+  nameOverride: ""
+  podAnnotations: {}
+  replicaCount: 1
+  resources:
+    requests:
+      cpu: 200m
+      memory: 128Mi
+    limits:
+      cpu: 200m
+      memory: 128Mi
+  restartPolicy: Always
+#############################     </Consumer>     #############################}}}
+
+##############################     <Producer>     ##############################{{{
+producer:
+  env:
+    - name: RABBITMQ_USERNAME
+      value: "guest"
+    - name: RABBITMQ_PASSWORD
+      value: "guest"
+    - name: SIGNAL_TYPE
+      value: "sine"
+  fullnameOverride: ""
+  image:
+    repository: # TODO
+    pullPolicy: IfNotPresent
+    tag: ""
+  imagePullPolicy: IfNotPresent
+  nameOverride: ""
+  podAnnotations: {}
+  replicaCount: 1
+  resources:
+    requests:
+      cpu: 200m
+      memory: 128Mi
+    limits:
+      cpu: 200m
+      memory: 128Mi
+  restartPolicy: Always
+#############################     </Producer>     #############################}}}
