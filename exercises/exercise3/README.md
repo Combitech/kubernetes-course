@@ -3,13 +3,13 @@
 
 Deploying Kubernetes manifests.
 
-> ❗ **NOTE:** While we pushed to `localhost`, we must use `primer` in the manifests since we’re inside the cluster now!
+> ❗ **NOTE:** While we pushed to `localhost`, we must use `myregistry` in the manifests since we’re inside the cluster now!
 >
 > _Example:_
 > 
 > `$ podman push --tls-verify=false localhost:1234/consumer:1`
 > 
-> -> `image: primer:1234/consumer:1`
+> -> `image: myregistry:1234/consumer:1`
 
 0. Follow the instructions in Setup below
 1. Create manifests for the Producer
